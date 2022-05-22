@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FullCalendarModule } from '@fullcalendar/angular';
+import dayGridPlugin from '@fullcalendar/daygrid';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +17,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { RecipeItemComponent } from './my-recipes/recipe-list/recipe-item/recipe-item.component';
 import { MenuEditComponent } from './menu/menu-edit/menu-edit.component';
 import { PantryEditComponent } from './my-pantry/pantry-edit/pantry-edit.component';
+FullCalendarModule.registerPlugins([dayGridPlugin]);
 
 @NgModule({
   declarations: [
@@ -31,7 +34,13 @@ import { PantryEditComponent } from './my-pantry/pantry-edit/pantry-edit.compone
     MenuEditComponent,
     PantryEditComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    FullCalendarModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
