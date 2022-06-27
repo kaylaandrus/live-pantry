@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { CalendarOptions } from '@fullcalendar/angular';
 
@@ -10,8 +11,9 @@ export class MenuComponent implements OnInit {
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
   };
-
-  constructor() {}
+  title = 'fullcalendar';
+  Events: any[] = [];
+  constructor(private httpClient: HttpClient) {}
 
   ngOnInit(): void {}
 }

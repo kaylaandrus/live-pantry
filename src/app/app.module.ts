@@ -9,7 +9,7 @@ import { MyPantryComponent } from './my-pantry/my-pantry.component';
 import { MyRecipesComponent } from './my-recipes/my-recipes.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { MenuComponent } from './menu/menu.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarComponent } from './Shared/navbar/navbar.component';
 import { RecipeEditorComponent } from './my-recipes/recipe-editor/recipe-editor.component';
 import { FormsModule } from '@angular/forms';
 import { RecipeListComponent } from './my-recipes/recipe-list/recipe-list.component';
@@ -17,6 +17,8 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { RecipeItemComponent } from './my-recipes/recipe-list/recipe-item/recipe-item.component';
 import { MenuEditComponent } from './menu/menu-edit/menu-edit.component';
 import { PantryEditComponent } from './my-pantry/pantry-edit/pantry-edit.component';
+import { RecipeComponent } from './shared/recipe/recipe.component';
+import { AuthComponent } from './auth/auth.component';
 FullCalendarModule.registerPlugins([dayGridPlugin]);
 
 @NgModule({
@@ -33,6 +35,8 @@ FullCalendarModule.registerPlugins([dayGridPlugin]);
     RecipeItemComponent,
     MenuEditComponent,
     PantryEditComponent,
+    RecipeComponent,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,

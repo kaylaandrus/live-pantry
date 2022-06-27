@@ -8,8 +8,18 @@ import { Recipe } from '../recipe.model';
 })
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[] = [
-    new Recipe('Poppyseed Chicken', 'Test description', ''),
-    new Recipe('Crunchy Ramen Salad', 'Test Description', ''),
+    new Recipe(
+      'Poppyseed Chicken',
+      'Test description',
+      '',
+      'https://www.kindpng.com/picc/m/235-2356386_cooking-icon-png-recipe-icon-free-vector-transparent.png'
+    ),
+    new Recipe(
+      'Crunchy Ramen Salad',
+      'Test Description',
+      '',
+      'https://www.kindpng.com/picc/m/235-2356386_cooking-icon-png-recipe-icon-free-vector-transparent.png'
+    ),
   ];
 
   constructor() {}

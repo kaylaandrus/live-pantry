@@ -18,4 +18,9 @@ export class PantryEditComponent implements OnInit {
     this.pantryIngredients.push(newIngredient);
     console.log(this.pantryIngredients);
   }
+
+  onDeletePantryItem(id: number) {
+    const index = id + 1;
+    this.pantryIngredients.slice(index, 1);
+  }
 }
